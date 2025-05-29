@@ -1,12 +1,2 @@
 #!/bin/bash
-
-if [ -f ls_cwd_content ]; then
-          
-        ls -la > ls_cwd_content
-
-	cat ls_cwd_content
-else
-  echo "the ls_cwd _content doesnot exist,create it"
-  touch ls_cwd_content
-fi
-     
+ls -la > ls_cwd_content     
