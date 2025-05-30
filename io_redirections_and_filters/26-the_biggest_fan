@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -f1 | sort | uniq -c | sort -nr | head -n 11
+declare -A c; while IFS=$'\t' read -r h _; do ((c["$h"]++)); done; printf '%s\t%s\n' "${!c[@]}" "${c[@]}" | sort -k2nr | head -n 11 | cut -f1
