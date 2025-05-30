@@ -1,3 +1,3 @@
 #!/bin/bash
-find . -type f -name "*.gif" -printf '%f\0' | while IFS= read -r -d $'\0' f; do printf '%s\n' "${f%.gif}"; done | sort -zf
+find . -type f -iname '*.gif' -printf "%f\n" | while read -r f; do printf "%s\n" "${f%.gif}"; done | sort -f
 
