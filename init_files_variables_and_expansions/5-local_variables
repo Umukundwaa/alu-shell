@@ -1,0 +1,2 @@
+#!/bin/bash
+{ echo "=== Variables ==="; set; echo -e "\n=== Environment ==="; printenv; echo -e "\n=== Functions ==="; declare -f; }
